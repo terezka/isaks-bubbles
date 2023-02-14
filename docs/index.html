@@ -5994,6 +5994,11 @@ var $author$project$Main$update = F2(
 	});
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
+var $elm$virtual_dom$VirtualDom$node = function (tag) {
+	return _VirtualDom_node(
+		_VirtualDom_noScript(tag));
+};
+var $elm$html$Html$node = $elm$virtual_dom$VirtualDom$node;
 var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
 var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
@@ -6081,6 +6086,14 @@ var $author$project$Main$view = function (model) {
 			]),
 		_List_fromArray(
 			[
+				A3(
+				$elm$html$Html$node,
+				'style',
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text('\n            body {\n              position: absolute;\n              margin: 0;\n              width: 100%;\n              height: 100vh;\n            }\n          ')
+					])),
 				A2(
 				$elm$html$Html$div,
 				_List_fromArray(

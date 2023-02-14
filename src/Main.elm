@@ -99,7 +99,18 @@ view model =
     , HA.style "height" "100vh"
     , HA.style "position" "relative"
     ]
-    [ H.div
+    [ H.node "style" []
+      [ H.text
+          """
+            body {
+              position: absolute;
+              margin: 0;
+              width: 100%;
+              height: 100vh;
+            }
+          """
+      ]
+    , H.div
         [ HA.style "width" "100%"
         , HA.style "height" "100%"
         , HA.style "position" "relative"
