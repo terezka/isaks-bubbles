@@ -1,10 +1,10 @@
-module Main exposing (..)
 
 import Browser
 import Browser.Events
 import Random
 import Html as H
 import Html.Attributes as HA
+import Svg
 import Json.Decode as D
 
 
@@ -95,12 +95,19 @@ mouseCoordsDecoder =
 view : Model -> H.Html Msg
 view model =
   H.div
-    [ HA.style "width" "500px"
-    , HA.style "height" "500px"
+    [ HA.style "width" "100%"
+    , HA.style "height" "100vh"
     , HA.style "position" "relative"
-    , HA.style "margin" "50px"
     ]
-    [ viewBubble model ]
+    [ H.div
+        [ HA.style "width" "100%"
+        , HA.style "height" "100%"
+        , HA.style "position" "relative"
+        , HA.style "padding" "50px"
+        , HA.style "box-sizing" "border-box"
+        ]
+        [ viewBubble model ]
+    ]
 
 
 viewBubble : Model -> H.Html Msg
