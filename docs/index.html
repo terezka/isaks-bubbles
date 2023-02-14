@@ -5970,6 +5970,7 @@ var $author$project$Main$subscriptions = function (model) {
 				A2($elm$json$Json$Decode$map, $author$project$Main$OnMouseClick, $author$project$Main$mouseCoordsDecoder))
 			]));
 };
+var $elm$core$Debug$log = _Debug_log;
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
 var $author$project$Main$update = F2(
@@ -5981,7 +5982,10 @@ var $author$project$Main$update = F2(
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{bubble: coords, color: color}),
+						{
+							bubble: A2($elm$core$Debug$log, 'New', coords),
+							color: color
+						}),
 					$elm$core$Platform$Cmd$none);
 			case 'OnMouseMove':
 				var coords = msg.a;

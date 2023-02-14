@@ -68,7 +68,7 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
   case msg of
     OnNewBubble color coords ->
-      ( { model | bubble = coords, color = color }, Cmd.none )
+      ( { model | bubble = Debug.log "New" coords, color = color }, Cmd.none )
 
     OnMouseMove coords ->
       ( { model | mouse = coords }, Cmd.none )
