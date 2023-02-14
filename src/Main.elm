@@ -101,24 +101,14 @@ view model =
     , HA.style "padding" "50px"
     , HA.style "box-sizing" "border-box"
     ]
-    [ H.node "style" []
-      [ H.text
-          """
-            body {
-              position: absolute;
-              margin: 0;
-              width: 100%;
-              height: 100vh;
-            }
-          """
-      ]
-    , H.div
+    [ H.div
         [ HA.style "width" "100%"
         , HA.style "height" "100%"
         , HA.style "position" "relative"
         ]
         [ H.h1
             [ HA.style "font-family" "monospace"
+            , HA.style "position" "absolute"
             , HA.style "user-select" "none"
             ]
             [ H.text "Isak's Bubble Game!" ]
@@ -132,7 +122,7 @@ viewBubble model =
     [ HA.style "position" "absolute"
     , HA.style "left" (String.fromInt model.bubble.x ++ "%")
     , HA.style "top" (String.fromInt model.bubble.y ++ "%")
-    , HA.style "transform" "translate(-50%, 50%)"
+    , HA.style "transform" "translate(-50%, -50%)"
     , HA.style "width" "100px"
     , HA.style "height" "100px"
     ]
