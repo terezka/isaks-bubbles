@@ -1,10 +1,10 @@
+module Main exposing (main)
 
 import Browser
 import Browser.Events
 import Random
 import Html as H
 import Html.Attributes as HA
-import Svg
 import Json.Decode as D
 
 

@@ -6072,14 +6072,26 @@ var $author$project$Main$view = function (model) {
 		$elm$html$Html$div,
 		_List_fromArray(
 			[
-				A2($elm$html$Html$Attributes$style, 'width', '500px'),
-				A2($elm$html$Html$Attributes$style, 'height', '500px'),
-				A2($elm$html$Html$Attributes$style, 'position', 'relative'),
-				A2($elm$html$Html$Attributes$style, 'margin', '50px')
+				A2($elm$html$Html$Attributes$style, 'width', '100%'),
+				A2($elm$html$Html$Attributes$style, 'height', '100vh'),
+				A2($elm$html$Html$Attributes$style, 'position', 'relative')
 			]),
 		_List_fromArray(
 			[
-				$author$project$Main$viewBubble(model)
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						A2($elm$html$Html$Attributes$style, 'width', '100%'),
+						A2($elm$html$Html$Attributes$style, 'height', '100%'),
+						A2($elm$html$Html$Attributes$style, 'position', 'relative'),
+						A2($elm$html$Html$Attributes$style, 'padding', '50px'),
+						A2($elm$html$Html$Attributes$style, 'box-sizing', 'border-box')
+					]),
+				_List_fromArray(
+					[
+						$author$project$Main$viewBubble(model)
+					]))
 			]));
 };
 var $author$project$Main$main = $elm$browser$Browser$element(
