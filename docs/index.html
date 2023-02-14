@@ -5993,8 +5993,11 @@ var $author$project$Main$update = F2(
 		}
 	});
 var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
 var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $author$project$Main$bubbleBlue = 'rgb(0, 88, 251)';
 var $author$project$Main$bubbleLightBlue = 'rgb(46, 192, 251)';
 var $author$project$Main$bubbleOrange = 'rgb(250, 161, 67)';
@@ -6090,6 +6093,16 @@ var $author$project$Main$view = function (model) {
 					]),
 				_List_fromArray(
 					[
+						A2(
+						$elm$html$Html$h1,
+						_List_fromArray(
+							[
+								A2($elm$html$Html$Attributes$style, 'font-family', 'monospace')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Isak\'s Bubble Game!')
+							])),
 						$author$project$Main$viewBubble(model)
 					]))
 			]));

@@ -106,7 +106,8 @@ view model =
         , HA.style "padding" "50px"
         , HA.style "box-sizing" "border-box"
         ]
-        [ viewBubble model ]
+        [ H.h1 [ HA.style "font-family" "monospace"] [ H.text "Isak's Bubble Game!" ]
+        , viewBubble model ]
     ]
 
 
