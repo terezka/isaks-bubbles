@@ -98,6 +98,8 @@ view model =
     [ HA.style "width" "100%"
     , HA.style "height" "100vh"
     , HA.style "position" "relative"
+    , HA.style "padding" "50px"
+    , HA.style "box-sizing" "border-box"
     ]
     [ H.node "style" []
       [ H.text
@@ -114,8 +116,6 @@ view model =
         [ HA.style "width" "100%"
         , HA.style "height" "100%"
         , HA.style "position" "relative"
-        , HA.style "padding" "50px"
-        , HA.style "box-sizing" "border-box"
         ]
         [ H.h1
             [ HA.style "font-family" "monospace"
