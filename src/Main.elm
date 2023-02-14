@@ -169,9 +169,9 @@ toCssColor color =
     Orange -> bubbleOrange
 
 
-bubblePurple = "rgb(227, 108, 253)"
-bubbleBlue = "rgb(0, 88, 251)"
-bubbleLightBlue = "rgb(46, 192, 251)"
-bubbleTurqouise = "rgb(20, 247, 239)"
-bubbleYellow = "rgb(249, 224, 51)"
-bubbleOrange = "rgb(250, 161, 67)"
+bubblePurple = "rgba(227, 108, 253, 0.9)"
+bubbleBlue = "rgba(0, 88, 251, 0.9)"
+bubbleLightBlue = "rgba(46, 192, 251, 0.9)"
+bubbleTurqouise = "rgba(20, 247, 239, 0.9)"
+bubbleYellow = "rgba(249, 224, 51, 0.9)"
+bubbleOrange = "rgba(250, 161, 67, 0.9)"
