@@ -5956,12 +5956,15 @@ var $elm$browser$Browser$Events$on = F3(
 			A3($elm$browser$Browser$Events$MySub, node, name, decoder));
 	});
 var $elm$browser$Browser$Events$onClick = A2($elm$browser$Browser$Events$on, $elm$browser$Browser$Events$Document, 'click');
+var $elm$browser$Browser$Events$onKeyDown = A2($elm$browser$Browser$Events$on, $elm$browser$Browser$Events$Document, 'keydown');
 var $elm$browser$Browser$Events$onMouseMove = A2($elm$browser$Browser$Events$on, $elm$browser$Browser$Events$Document, 'mousemove');
 var $author$project$Main$subscriptions = function (model) {
 	return $elm$core$Platform$Sub$batch(
 		_List_fromArray(
 			[
 				$elm$browser$Browser$Events$onMouseMove(
+				A2($elm$json$Json$Decode$map, $author$project$Main$OnMouseMove, $author$project$Main$mouseCoordsDecoder)),
+				$elm$browser$Browser$Events$onKeyDown(
 				A2($elm$json$Json$Decode$map, $author$project$Main$OnMouseMove, $author$project$Main$mouseCoordsDecoder)),
 				$elm$browser$Browser$Events$onClick(
 				A2($elm$json$Json$Decode$map, $author$project$Main$OnMouseClick, $author$project$Main$mouseCoordsDecoder))

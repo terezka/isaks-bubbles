@@ -81,6 +81,7 @@ subscriptions : Model -> Sub Msg
 subscriptions model =
   Sub.batch
     [ Browser.Events.onMouseMove (D.map OnMouseMove mouseCoordsDecoder)
+    , Browser.Events.onKeyDown (D.map OnMouseMove mouseCoordsDecoder)
     , Browser.Events.onClick (D.map OnMouseClick mouseCoordsDecoder)
     ]
 
