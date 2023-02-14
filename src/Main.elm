@@ -62,6 +62,7 @@ type Msg
   = OnNewBubble Color Coordinates
   | OnMouseMove Coordinates
   | OnMouseClick Coordinates
+  | OnKeyPress
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -76,12 +77,15 @@ update msg model =
     OnMouseClick coords ->
       ( model, newBubble )
 
+    OnKeyPress ->
+      ( model, newBubble )
+
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
   Sub.batch
     [ Browser.Events.onMouseMove (D.map OnMouseMove mouseCoordsDecoder)
-    , Browser.Events.onKeyDown (D.map OnMouseMove mouseCoordsDecoder)
+    , Browser.Events.onKeyDown (D.succeed OnKeyPress)
     , Browser.Events.onClick (D.map OnMouseClick mouseCoordsDecoder)
     ]
 

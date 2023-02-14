@@ -5534,6 +5534,7 @@ var $author$project$Main$init = _Utils_Tuple2(
 		A2($author$project$Main$Coordinates, 0, 0),
 		$author$project$Main$Purple),
 	$author$project$Main$newBubble);
+var $author$project$Main$OnKeyPress = {$: 'OnKeyPress'};
 var $author$project$Main$OnMouseClick = function (a) {
 	return {$: 'OnMouseClick', a: a};
 };
@@ -5965,7 +5966,7 @@ var $author$project$Main$subscriptions = function (model) {
 				$elm$browser$Browser$Events$onMouseMove(
 				A2($elm$json$Json$Decode$map, $author$project$Main$OnMouseMove, $author$project$Main$mouseCoordsDecoder)),
 				$elm$browser$Browser$Events$onKeyDown(
-				A2($elm$json$Json$Decode$map, $author$project$Main$OnMouseMove, $author$project$Main$mouseCoordsDecoder)),
+				$elm$json$Json$Decode$succeed($author$project$Main$OnKeyPress)),
 				$elm$browser$Browser$Events$onClick(
 				A2($elm$json$Json$Decode$map, $author$project$Main$OnMouseClick, $author$project$Main$mouseCoordsDecoder))
 			]));
@@ -5994,8 +5995,10 @@ var $author$project$Main$update = F2(
 						model,
 						{mouse: coords}),
 					$elm$core$Platform$Cmd$none);
-			default:
+			case 'OnMouseClick':
 				var coords = msg.a;
+				return _Utils_Tuple2(model, $author$project$Main$newBubble);
+			default:
 				return _Utils_Tuple2(model, $author$project$Main$newBubble);
 		}
 	});
